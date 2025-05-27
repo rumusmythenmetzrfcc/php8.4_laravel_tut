@@ -1,0 +1,49 @@
+---GENERAL SETUP WINDOWS---
+
+php for windows is unpacked locally
+ie. at C:\workspaces\s\m\l\php\php-8.4.5-nts-Win32-vs17-x64
+
+C:\workspaces\s\m\l\php\php-8.4.5-nts-Win32-vs17-x64\php.ini.development is changed
+mbstring uncomment
+extension_dir uncomment
+
+Install composer
+https://getcomposer.org/download/
+
+punit is the testing framework
+Composer will be used to install punit
+C:\Users\[username]\AppData\Local\ComposerSetup\bin\composer
+Inside the procject root:
+composer require --dev phpunit/phpunit
+composer dump-autoload
+Generates
+C:\workspaces\s\m\l\php\intellijipro\vendor\autoload.php
+which loads
+C:\workspaces\s\m\l\php\intellijipro\vendor\composer\autoload_real.php
+
+PunitDoc:
+https://docs.phpunit.de/en/12.0/installation.html#what-is-inside-the-phar
+
+
+intelliji:
+Install official Jetbrains PHP plugin
+add php.ini and unpacked php.exe to php settings
+located at C:\workspaces\s\m\l\php\php-8.4.5-nts-Win32-vs17-x64
+add autoload.php path to intelliji->php/TestFrameworks (Composer Autoloader)
+set php language level to 8.4
+Tests run now
+
+Optional:
+You may add php to environment variable PATH
+C:\workspaces\s\m\l\php\php-8.4.5-nts-Win32-vs17-x64
+Or better have a bat file that just adds the PATH per cmd instance
+see ./php8.4_cmd.bat
+move the file to:
+C:/workspaces/mybats/env/php8.4_cmd.bat
+In Intelliji you can have a custom cmd version:
+Terminal>Settings>shell_path
+Short name php8.4_cmd.bat can be used as value if
+you add i.e. C:/workspaces/mybats/env to PATH
+
+
+
