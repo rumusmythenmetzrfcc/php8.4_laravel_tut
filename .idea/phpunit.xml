@@ -3,7 +3,9 @@
   <component name="PHPUnit">
     <option name="directories">
       <list>
-        <option value="C:\workspaces\s\rumus\25\php8.4_std_t\tests" />
+        <option value="C:\workspaces\s\rumus\25\php8.4_laravel_tut\tests" />
+        <option value="$PROJECT_DIR$/medium-app/tests/Unit" />
+        <option value="$PROJECT_DIR$/medium-app/tests/Feature" />
       </list>
     </option>
   </component>
